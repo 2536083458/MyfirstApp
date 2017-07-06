@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar  class="homeNav">
+      <ion-grid class="dynamicHeader">
+      <ion-row>
+        <ion-col col-1>
+          <h3><ion-icon name="person-add"></ion-icon></h3>
+        </ion-col>
+        <ion-col col-3>
+        <h3>热门</h3>
+        </ion-col>
+        <ion-col col-3>
+          <h3>关注</h3>
+        </ion-col>
+        <ion-col col-3>
+        <h3>同城</h3>
+        </ion-col>
+        <ion-col col-2>
+        <h3><ion-icon name="camera"></ion-icon></h3>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+      <div style="width:100%;height:178px;text-align:center;background-color:grey;margin-top:-26px;">
+         <h2 style="position:relative;top:50%">  此处播放今日热门视频 </h2>
+      </div>
+     
+    <ion-grid class="hotNav"  >    
+    <ion-row>
+      <ion-col col-6 *ngFor="let hotItem of hotItems">
+        <ion-card><img style="height:132px" src="{{hotItem.src}}"/></ion-card>
+        <ion-card-content> {{hotItem.itemIndex}} {{hotItem.content}}</ion-card-content>
+        <ion-list no-lines class="hotLists">
+          <ion-item class="hotI"> 
+            <ion-avatar item-start>
+              <img src="{{hotItem.srcTwo}}">
+            </ion-avatar>
+            <p>{{hotItem.userName}}</p>
+            <ion-icon class="hotIcon" name="volume-up" item-end>
+              {{hotItem.thumbs}}
+            </ion-icon>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+
+</ion-content>

@@ -1,0 +1,104 @@
+<ion-header>  
+  <ion-grid class="contactHeader">
+    <ion-row>
+      <ion-col col-10>
+         <h2 style="margin-left:10px!important">发现</h2>
+      </ion-col>
+      <ion-col col-2>
+       <h2> <ion-icon name="search" icon-right></ion-icon></h2>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+  <ion-navbar class="secondNav"> 
+  <ion-slides class="slide-title" [slidesPerView]="pageNumber" [pager]="false">
+   <ion-slide *ngFor="let slide of slides; let i = index;">  
+    <div (click)="onClick(i)">  
+      <span class="slide-title-unit" [ngClass]="{'slide-title-active': selectedIndex == i}">{{slide}}</span>  
+    </div>  
+  </ion-slide>  
+  </ion-slides>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+   <div class="autoSlideImg">
+    <ion-card> <img src="assets/img/catTwo.jpg" /></ion-card>
+  </div>
+ 
+    <ion-grid>
+      <ion-row class="trainIcon">
+          <ion-col>
+              <ion-icon name="body"></ion-icon>
+              <p>动作库</p>
+          </ion-col>
+          <ion-col>
+              <ion-icon name="musical-notes"></ion-icon>
+              <p>音乐库</p>
+          </ion-col>
+          <ion-col>
+              <ion-icon name="pause"></ion-icon>
+              <p>全部训练</p>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+  <div class="blank"></div>
+ 
+  <ion-list class="trainList" no-lines>
+    <button ion-item  class="btnTopic" (click)="itemSelected(item)">
+     推荐训练
+    </button> 
+    <div class="date-thing">
+        <div *ngFor="let sitem of sportsItems"> 
+            <img src="{{sitem.sportSrc}}"/>
+            <div class="exerciseName">{{sitem.sportName}}</div>
+            <div class="exercisePeople">{{sitem.enterPeople}}人已参加</div>
+            <div class="exerciseTime">
+            <h3 class="eRank">{{sitem.sportRank}}
+              <P style="float:left;margin-left:8%;font-size:14px;color:#fff"> {{sitem.sportTime}}分钟 -</P>
+            </h3>         
+            </div>
+        </div> 
+    </div>
+  </ion-list>
+  <div class="blank"></div>
+
+  <ion-list class="trainList" no-lines>
+    <button ion-item  class="btnTopic" (click)="itemSelected(item)">
+     新手入门
+    </button> 
+    <div class="date-thing">
+        <div *ngFor="let sitem of sportsItems"> 
+            <img src="{{sitem.sportSrc}}"/>
+            <div class="exerciseName">{{sitem.sportName}}</div>
+            <div class="exercisePeople">{{sitem.enterPeople}}人已参加</div>
+            <div class="exerciseTime">
+            <h3 class="eRank">{{sitem.sportRank}}
+              <P style="float:left;margin-left:8%;font-size:14px;color:#fff"> {{sitem.sportTime}}分钟 -</P>
+            </h3>         
+            </div>
+        </div> 
+    </div>
+  </ion-list>
+  <div class="blank"></div>
+
+  <ion-list class="trainList" no-lines>
+    <button ion-item  class="btnTopic" (click)="itemSelected(item)">
+     零基础减脂
+    </button> 
+    <div class="date-thing">
+        <div *ngFor="let sitem of sportsItems"> 
+            <img src="{{sitem.sportSrc}}"/>
+            <div class="exerciseName">{{sitem.sportName}}</div>
+            <div class="exercisePeople">{{sitem.enterPeople}}人已参加</div>
+            <div class="exerciseTime">
+            <h3 class="eRank">{{sitem.sportRank}}
+              <P style="float:left;margin-left:8%;font-size:14px;color:#fff"> {{sitem.sportTime}}分钟 -</P>
+            </h3>         
+            </div>
+        </div> 
+    </div>
+  </ion-list>
+  <div class="blank"></div>
+</ion-content>

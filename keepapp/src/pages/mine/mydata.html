@@ -1,0 +1,132 @@
+<ion-header>
+  <ion-navbar class="myDataNav">
+    <ion-icon style="margin-left:94%;color:#fff;" name="share-alt"></ion-icon>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="myData">
+     <ion-icon style="margin-left:94%;margin-top:10%;color:#fff;" name="camera"></ion-icon>
+  </div>
+
+  <div class="firstNav">
+    <div class="userDataImg"> <img class="" src="assets/img/aCat.jpg"> </div>
+    <div style="float:right;"> 
+      <button ion-button class="edit" (click)="editData()" round outline>修改资料</button>
+    </div>
+  </div>
+
+  <div class="nameAddress"> 
+      <h2>光阳Bin</h2>
+      <p>江西省南昌市</p>
+  </div>
+
+  <ion-grid>
+    <ion-row class="fansShow">
+      <ion-col col-4>
+          <p>0</p>
+          <p>粉丝</p>
+      </ion-col>
+      <ion-col col-4> 
+          <p>0</p>
+          <p>关注</p>
+      </ion-col>
+      <ion-col col-4> 
+          <p>1</p>
+          <p>动态</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ <div class="blank"></div>
+
+ <div> 
+   <ion-grid>
+    <ion-row > 
+      <ion-col class="allRank" col-2><p>T1</p></ion-col>
+      <ion-col class="minuteRank" col-6> <p>总运动38分钟</p></ion-col>
+      <ion-col  col-4><p>近一周运动0分钟</p></ion-col>
+    </ion-row>
+   </ion-grid>
+   <div class="bandage">
+      <div style="background-color:green;width:38%;height:96%;-webkit-border-radius: 10px;
+        border-radius: 10px;"><p>  </p>   
+      </div>
+   </div>
+</div>
+    <ion-grid>
+    <ion-row class="fansShow">
+      <ion-col col-4>
+          <p>健身</p>
+          <p>38分钟</p>
+      </ion-col>
+      <ion-col col-4> 
+          <p>跑步</p>
+          <p>0.0公里</p>
+      </ion-col>
+      <ion-col col-4> 
+          <p>骑行</p>
+          <p>0.0公里</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+   <ion-list class="findLists" >
+    <button ion-item  class="btnTopic" (click)="itemSelected(item)">
+       徽章
+    </button> 
+    <ion-item>
+      <div class="badge">
+            <div><p>徽章一</p></div>
+            <div><p>徽章二</p></div>
+            <div><p>徽章三</p></div>
+            <div><p>徽章四</p></div>
+            <div><p>徽章五</p></div>
+            <div><p>徽章六</p></div>
+            <div><p>徽章七</p></div>
+            <div><p>徽章八</p></div>
+            <div><p>徽章九</p></div>
+            <div><p>徽章十</p></div>
+     </div>
+    </ion-item>
+  </ion-list>
+  <div class="blank"></div>
+
+   <ion-list class="homeLists">
+      <ion-list-header>
+         <h3>参加的训练</h3>
+      </ion-list-header>
+      <ion-item class="trainItems" *ngFor="let titem of trainItems">
+        <ion-row> 
+          <h2>{{titem.trainName}}</h2>
+          <h3 style="position:absolute;left:80%">{{titem.trainTime}}分钟-{{titem.trainRank}}</h3>  
+        </ion-row>
+        <ion-row style="margin-top:5px;"> 
+          <p>完成{{titem.finished}}次</p>
+          <p style="position:absolute;left:85%">{{titem.downloadStatus}}</p>
+        </ion-row>
+      </ion-item>
+  </ion-list>
+  <div class="blank"></div>
+
+  <ion-list class="mineLists" no-lines>
+    <ion-list-header class="mHeader">
+     <h2> 运动日记 </h2>
+    </ion-list-header>
+    <ion-item *ngFor="let mitem of mydiary" class="diary">
+        <button ion-item  class="" (click)="openMydiary(mitem)">
+          {{mitem.diaryTime}}
+        </button> 
+        <div style="float:left;width:15%;font-size:14px;">
+           {{mitem.diaryMinute}} 
+        </div>
+        <div style="float:left;width:82%;margin-left:5px;">
+            <p style="font-size:15px;color:#333!important">{{mitem.diaryContent}} </p>
+            <p style="margin-top:9px;"> 
+              <ion-icon name="volume-up"> {{mitem.diaryThumbs}} </ion-icon>
+              <ion-icon name="chatboxes-outline"> {{mitem.diaryDiscuss}}</ion-icon>
+            </p>
+        </div> 
+    </ion-item>
+  </ion-list>
+  <div class="blank"></div>
+
+</ion-content>

@@ -1,0 +1,204 @@
+page-home {
+
+}
+.dynamicHeader{
+   text-align: center;
+   padding: 0px!important;
+}
+.blank{
+        height: 15px;
+        background-color:  #CCCCCC;
+}
+.ranking ion-label{
+    overflow: visible!important;
+}
+.userImg{
+    border-radius:50%;
+    float:right;
+    width:40px;
+    height:40px;
+    margin-top:-10px!important;
+    border: 3px solid green;
+    //margin-right:20px;
+}
+.homeLists{
+     margin: -1px 0 0px!important;
+}
+.addTrain{
+    position:absolute;
+    left:68%;
+    font-size:18px!important;
+    font-weight: bold;
+    margin-top: -4px;
+}
+.homeLists ion-label{
+    overflow: visible!important;
+    margin-top:10px!important;
+}
+.trainItems ion-label{
+    overflow: visible!important;
+    margin: 26px 8px 14px 0!important;
+}
+.recommendSports img{
+    width:100%;
+    height:132px;
+}
+.sportName{
+    position: absolute;
+    top: 38%;
+    font-size: 26px;
+    left:8%;
+    color: #fff;
+}
+.sportTime{
+    position: absolute;
+    top: 65%;
+    font-size: 14px;
+    left:8%;
+    color: #fff;
+}
+.recommendSports ion-label{
+    overflow: visible!important;
+    margin-top:-7px!important;
+}
+.lessonImg img{
+    width:100%;
+   height: 142px;
+}
+.addLesson{
+    font-size:24px!important;
+    position:absolute;
+    left:26%;
+    font-weight: bold;
+    color: #fff;
+    top:30%;
+    text-align: center;
+    height: 36px!important;
+    border:2px solid #fff;
+}
+.lessonDescription{
+    position:absolute;
+    left:24%;
+    top:55%;
+    font-weight: bold;
+    font-size:21px!important;
+    color:#000!important;
+}
+.lessonDescription2{
+    position:absolute;
+    top:70%;
+    left:32%;
+    font-weight: bold;  
+    font-size:21px!important;
+    color:#000!important;
+}
+.runContent{
+    text-align: center;
+    height:40%;
+    width:100%;
+}
+.runDetail{
+    margin-left: auto; margin-right: auto;
+    margin-top:35px;
+    text-align: center;
+    width:57%;
+    height: 100%;
+    border:3px solid #CCC;
+    border-radius:50%;
+    overflow: hidden;
+}
+.runDetail h3{
+    margin-top:36px;
+    font-size:16px!important;
+}
+.runDetail h2{
+    margin-top:20px!important;
+    font-size:20px!important;
+    color:green;
+    font-weight: bold!important;
+    font-family:Impact;
+}
+.runDetail h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top:20px!important;
+    font-size:32px!important;
+    font-weight: bold!important;
+    color:#333!important
+}
+.runningChoice ion-item{
+    margin-top: -1px;
+    text-align: center;
+    color: white;
+    background-color: green;
+    height: 65px;
+}
+.divShow{
+    border:7px solid green;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    border-width: 7px  7px  7px  7px ;
+    width: 7px;
+    height:7px;
+    margin-top: -10px;
+}
+.runChoice{
+    margin-top:36px;
+    width:100%;
+    text-align: center;
+    padding-top:10px;
+    height: 58px;
+    border-top:2px solid #CCC;
+}
+.runChoice .segment-ios .segment-button:first-of-type{
+    border-top-left-radius: 0px!important; 
+    border-bottom-left-radius: 0px!important; 
+}
+.runChoice .segment-activated{
+    color: #000!important;
+    background-color:transparent!important;
+    border:none!important;
+
+}
+.segment-button{
+    color:grey!important;
+    background-color:transparent!important;
+    border:none!important;
+}
+.runningChoice .list-ios{
+   margin: 0px!important;
+}
+.slideForMore{
+    text-align:center;
+    border-bottom:2px solid #CCC;
+}
+.setting{
+    margin-left: 85%;
+    margin-right: 5%;
+    width:100%;
+}
+.gotoCycle{
+    text-align: center;
+    width:100%;
+    line-height: 60px;
+    color:white;
+    font-size: 20px;
+    margin-top:45px;
+    background-color: green;
+}
+.cycleImg{
+    height: 30px;
+    width: 30px;
+    float: right;
+    margin-top:15px;
+    margin-right: 20px;
+}
+.homeNav .button-inner{
+    display: none!important;
+}
+.header-ios .toolbar-background-ios{
+    border-style: none!important;
+}
+.toolbar-background-ios{
+    background-color: #fff!important;
+}

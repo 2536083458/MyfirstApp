@@ -1,0 +1,162 @@
+page-mine {
+   .detailIntroduce{
+            background-color: #574E5F;
+    }
+    .mHeader{
+         font-size:22px;
+         font-weight: bold;
+         //font-family: STHeiti;
+    }
+    .mineRecord button{
+         font-size:22px;
+         font-weight: bold;
+         //font-family: STHeiti;
+    }
+    .thumb{
+        height:80px !important;
+        width:80px !important;
+        border:2px solid #FFF;
+    }
+
+}
+.detailIntroduce img{
+       margin-top:-10px;
+       border-radius: 50%;
+}
+.rankRecord{
+        font-family: STHupo;
+        font-size:20px;
+        font-style: oblique; 
+}
+.gridForMinie{
+        font-size:14px;
+}
+.mineLists{
+        margin: -1px 0 0px!important;
+}
+.blank{
+        height: 15px;
+        background-color:  #CCCCCC;
+}
+.myDataNav{
+          background-color: #574E5F!important;
+          padding: 6px!important;
+}
+.userDataImg{
+    float:left;
+}
+.userDataImg img{
+        height: 80px;
+        width: 80px;
+        margin-top:-20px;
+        border-radius:50%;
+        border:3px solid #FFF;
+}
+.myDataNav .toolbar-background-ios{
+      background-color: #574E5F!important;
+      border:none!important;
+}
+.myData{
+        width:100%;
+        height:66px;
+        background-color: #574E5F;
+}
+.firstNav{
+        width:95%;
+        margin-top:5px;
+        margin-left:2%;
+        height:70px;
+}
+.nameAddress{
+        margin-left:15px;
+}
+.fansShow ion-col{
+    text-align: center!important;
+}
+.bandage{
+        width: 96%;
+        height: 15px;
+        background-color: #CCCCCC;
+        margin-left:2%;
+       -webkit-border-radius: 10px;
+        border-radius: 10px;
+        margin-top:-34px;
+}
+.allRank{
+        color:green;
+        font-family: STHupo;
+        font-size:24px;
+        font-style: oblique; 
+        margin-top:-10px;
+        padding-left:15px;
+
+}
+.minuteRank{
+       font-size:16px;
+       font-weight: bold;
+}
+.badge {
+        display: flex;
+        overflow-x: auto;
+    }
+.badge div {
+        margin: auto;
+        min-width: 17%;
+        text-align: center;
+        color: #fff;
+}
+.diary ion-label{
+        white-space: normal!important;
+}
+.userDiaryImg img{
+        height: 80px;
+        width: 80px;
+        border-radius:50%;
+        border:3px solid #FFF;
+        margin-top:25px;
+}
+.diaryContent{
+        width: 100%;
+        height: 100%;
+        padding-left:3%;
+        background-color: #574E5F!important;
+}
+.diaryContent div{
+        color:#fff;
+}
+.logoWord{
+        margin-top:46px;
+        font-family: STHupo;
+        font-size:16px;
+        font-style: oblique; 
+        margin-left:8px;
+}
+.detailDiary{
+        margin-left:15px;
+        border-left: 2px solid grey;
+}
+.edit{
+        color:#000;
+        border-color: #ccc;
+        font-size: 15px!important;
+}
+.myImg img{
+        width:40%;
+        float:right;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+}
+.editImg{
+        float:left;
+        width:60%;
+        margin-top:24px;
+}
+.cuteName input{
+        text-align: right!important;
+        padding-right: 12px;
+}
+.dynamicHeaderMine{
+   padding: 0px!important;
+}
+

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar class="homeNav">
+    <ion-grid class="dynamicHeader">
+     <ion-row>
+      <ion-col col-1>
+          <h3></h3>
+      </ion-col>
+      <ion-col col-3 (click)="openTrain()">
+          <h3>训练</h3>
+      </ion-col>
+      <ion-col col-3 (click)="openPage2()">
+          <h3>跑步</h3>
+      </ion-col>
+      <ion-col col-3 style="border-bottom:2px solid grey">
+          <h3>骑行</h3>
+      </ion-col>
+      <ion-col col-2>
+          <h3><ion-icon name="search"></ion-icon></h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="setting">
+        <h2> <ion-icon name="settings" color="grey"></ion-icon></h2>
+    </div>
+    <div class="runContent">
+        <div class="runDetail">
+            <h3>总公里数</h3>
+            <h1>0.0</h1>
+            <h2>CYCLING</h2> 
+        </div>
+        <div style="width:100%;margin-top:-32px;background-color:#fff"> <p>暂无等级</p></div>
+    </div>
+    <div style="text-align:center;margin-top:54px;">
+        <p>"开始你的第一次骑行吧"</p>
+        
+    </div>
+
+  
+    <div class="gotoCycle" >
+        出发去骑行 
+        <img class="cycleImg" src="assets/img/cycle2.gif">
+    </div>
+
+
+    
+</ion-content>

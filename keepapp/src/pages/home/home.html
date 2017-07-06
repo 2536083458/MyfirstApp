@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-navbar class="homeNav">
+    <ion-grid class="dynamicHeader">
+     <ion-row>
+      <ion-col col-1>
+          <h3></h3>
+      </ion-col>
+      <ion-col col-3 style="border-bottom:2px solid grey">
+          <h3>训练</h3>
+      </ion-col>
+      <ion-col col-3 (click)="openPage()">
+          <h3>跑步</h3>
+      </ion-col>
+      <ion-col col-3 (click)="openPage2()">
+          <h3>骑行</h3>
+      </ion-col>
+      <ion-col col-2>
+          <h3><ion-icon name="search"></ion-icon></h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list class="homeLists" no-lines>
+    <ion-item  class="" (click)="itemSelected(item)">
+      本周运动时长(分钟)
+          <button ion-button color="grey" (click)="itemSelected(item)" clear>
+              <ion-icon style="margin-top:-15px!important;" name='arrow-forward'></ion-icon>
+          </button>
+    </ion-item> 
+    <ion-item>
+      <ion-grid class="">
+       <ion-row>
+        <ion-col >
+      
+        </ion-col>
+      </ion-row>
+     </ion-grid>
+    </ion-item>
+    <ion-item  class="ranking" (click)="itemSelected(item)">
+      本周好友运动排名
+      <img class="userImg" src="assets/img/aCat.jpg" />
+          
+    </ion-item> 
+  </ion-list>
+  <div class="blank"></div>
+
+  <ion-list class="homeLists">
+      <ion-list-header>
+         <h3>我的训练
+         <button ion-button class="addTrain" (click)="addTrain()" icon-left clear>
+            <ion-icon name="add"></ion-icon> 添加训练
+         </button>
+         </h3>
+      </ion-list-header>
+      <ion-item class="trainItems" *ngFor="let titem of trainItems">
+        <ion-row> 
+          <h2>{{titem.trainName}}</h2>
+          <h3 style="position:absolute;left:80%">{{titem.trainTime}}分钟-{{titem.trainRank}}</h3>  
+        </ion-row>
+        <ion-row style="margin-top:5px;"> 
+          <p>{{titem.lastTrain}}</p>
+          <p style="position:absolute;left:85%">{{titem.downloadStatus}}</p>
+        </ion-row>
+      </ion-item>
+  </ion-list>
+  <div class="blank"></div>
+
+  <ion-list class="homeLists" no-lines>
+    <ion-list-header>
+        <h3>今日推荐运动</h3>
+    </ion-list-header> 
+    <ion-item class="recommendSports" *ngFor="let sitem of sportsItems">
+      <img src="{{sitem.sportSrc}}"/>
+      <div class="sportName">{{sitem.sportName}}</div>
+      <div class="sportTime">{{sitem.sportTime}}分钟 - {{sitem.sportRank}}</div>
+    </ion-item>
+  </ion-list>
+  <div class="blank"></div>
+
+  <ion-list class="homeLists" no-lines>
+    <ion-list-header>
+        <h3>Keep日报</h3>
+    </ion-list-header> 
+    <ion-item class="recommendSports">
+        <img src="assets/img/aCat.jpg">
+       <h2 class="articleTitle">健身的人吃的瓶瓶罐罐都有啥用？</h2>
+       <p class="articleDiscuss">123人评论/89889人阅读</p>  
+    </ion-item>
+   </ion-list>
+  <div class="blank"></div>
+
+  <ion-list class="homeLists" no-lines>
+    <ion-list-header>
+        <h3>我的课程表</h3>
+    </ion-list-header> 
+    <ion-item class="lessonImg">
+       <img src="assets/img/aCat.jpg">
+       <button class="addLesson" ion-button icon-left round outline>
+        <ion-icon name="add"></ion-icon>
+         定制课程表
+      </button>
+       <p class="lessonDescription">量身定制1-4周训练安排</p>  
+       <p class="lessonDescription2">达成理想身材</p> 
+    </ion-item>
+   </ion-list>
+  <div class="blank"></div>
+</ion-content>

@@ -1,0 +1,113 @@
+
+<ion-header>  
+  <ion-grid class="contactHeader">
+    <ion-row>
+      <ion-col col-10>
+         <h2 style="margin-left:10px!important">发现</h2>
+      </ion-col>
+      <ion-col col-2>
+       <h2> <ion-icon name="search" icon-right></ion-icon></h2>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+  <ion-navbar class="secondNav"> 
+  <ion-slides class="slide-title" [slidesPerView]="pageNumber" [pager]="false">
+   <ion-slide *ngFor="let slide of slides; let i = index;">  
+    <div (click)="onClick(i)">  
+      <h3 class="slide-title-unit" [ngClass]="{'slide-title-active': selectedIndex == i}">{{slide}}</h3>  
+    </div>  
+  </ion-slide>  
+  </ion-slides>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="autoSlideImg">
+   <ion-card> <img src="assets/img/catTwo.jpg" /> </ion-card>
+  </div>
+  <div class="blank"></div>
+ 
+  <ion-list class="topicDiscuss findLists" no-lines>
+    <button ion-item  class="btnTopic" (click)="itemSelected(item)">
+     话题讨论
+    </button> 
+
+    <ion-item>
+      <ion-grid class="topImg">
+      <ion-row>
+        <ion-col *ngFor="let item of items">
+          <ion-card>  <img src="{{item.src}}"/></ion-card>
+          <div class="card-title">  {{item.title}}</div>
+        </ion-col>
+      </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+  <div class="blank"></div>
+
+  <ion-list class="activityLists findLists" >
+    <button ion-item  class="btnTopic" (click)="itemSelected(item)">
+     热门活动
+    </button> 
+    <ion-list class="findLists" no-lines *ngFor="let aitem of actItems">
+    <ion-item class="activity">
+      <img src="{{aitem.src}}"/>
+      <div class="actStatus">{{aitem.status}}</div>
+      <div class="actType">{{aitem.type}}</div>
+      <div class="actTitle">{{aitem.title}}</div>
+    </ion-item>
+    </ion-list>
+  </ion-list>
+  <div class="blank"></div>
+
+  <ion-list class="topicDiscuss findLists" no-lines>
+    <button ion-item  class="btnTopic" (click)="itemSelected(item)">
+     小组推荐
+    </button> 
+    <ion-item>
+      <ion-grid class="groupImg">
+       <ion-row>
+        <ion-col *ngFor="let gitem of groupItems">
+         <ion-card> <img src="{{gitem.src}}"/></ion-card>
+         <img class="groupImgTwo" src="{{gitem.srcTwo}}"/>
+         <div class="groupName">{{gitem.name}}</div>
+         <div class="groupNum">{{gitem.nums}}人已参加</div>  
+        </ion-col>
+      </ion-row>
+     </ion-grid>
+    </ion-item>
+  </ion-list>
+  <div class="blank"></div>
+  
+  <ion-list class="topicDiscuss findLists" no-lines>
+    <button ion-item  class="btnTopic" (click)="itemSelected(item)">
+     达人推荐
+    </button> 
+    <ion-list class="findLists"  *ngFor="let mitem of memberItems">
+    <ion-item class="memberImg">
+       <ion-avatar item-start>
+        <img src="{{mitem.src}}">
+       </ion-avatar>
+       <h2 class="quote">{{mitem.name}}</h2>
+       <p class="quote">{{mitem.quote}}</p>
+       <button class="notice" ion-button item-end color="secondary" round outline>关注</button>
+    </ion-item>
+    </ion-list>
+   </ion-list>
+  <div class="blank"></div>
+
+  <ion-list class="topicDiscuss findLists" no-lines>
+    <button ion-item  class="btnTopic" (click)="itemSelected(item)">
+     精选文章
+    </button> 
+    <ion-item class="articleImg">
+       <ion-card > <img src="assets/img/aCat.jpg"></ion-card>
+       <h2 class="articleTitle">健身的人吃的瓶瓶罐罐都有啥用？</h2>
+       <p class="articleDiscuss">123人评论/89889人阅读</p>  
+    </ion-item>
+   </ion-list>
+  <div class="blank"></div>
+ 
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar class="myDataNav" (click)="backToLast()">
+    <!--<ion-icon name="arrow-back"></ion-icon>-->
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="diaryContent">
+    <div class="userDiaryImg"> <img class="" src="assets/img/aCat.jpg"> </div>
+    <div><h1>光阳bin</h1></div>
+    <div><h2>{{diaryTime}}/  在Keep运动</h2></div>
+    <div class="detailDiary">
+        <div style="margin-top:15px;margin-left:8px;">{{diaryMinute}}</div>
+        <div style="margin:15px 11px 0 14px;font-size:18px">{{diaryContent}}</div>
+        <div class="logoWord">自律给我自由</div>
+    </div>
+    <div style="padding-top:30%;">Keep运动日记</div>
+  </div>
+</ion-content>

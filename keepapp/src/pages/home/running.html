@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-navbar class="homeNav">
+    <ion-grid class="dynamicHeader">
+     <ion-row>
+      <ion-col col-1>
+          <h3></h3>
+      </ion-col>
+      <ion-col col-3 (click)="openTrain()">
+          <h3>训练</h3>
+      </ion-col>
+      <ion-col col-3 style="border-bottom:2px solid grey">
+          <h3>跑步</h3>
+      </ion-col>
+      <ion-col col-3 (click)="openPage2()">
+          <h3>骑行</h3>
+      </ion-col>
+      <ion-col col-2>
+          <h3><ion-icon name="search"></ion-icon></h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="runContent">
+        <div class="runDetail">
+            <h3>总公里数</h3>
+            <h1>0.0</h1>
+            <h2>RUNNING</h2> 
+        </div>
+        <div style="width:100%;margin-top:-32px;background-color:#fff"> <p>暂无等级</p></div>
+    </div>
+    <div style="text-align:center;margin-top:34px;">
+        <p>"开始你的第一次跑步吧"</p>
+    </div>
+
+    <div class="runChoice">
+        <ion-segment [(ngModel)]="runningMachine">
+            <ion-segment-button value="machine"> 跑步机</ion-segment-button>
+            <ion-segment-button value="outside"> 户外跑步 </ion-segment-button>
+        </ion-segment>
+    </div>
+
+    <div class="runningChoice" [ngSwitch]="runningMachine">
+        <ion-list *ngSwitchCase="'machine'">
+            <div class="divShow" style="margin-left:23%"></div>
+            <ion-item>
+                 出发去跑步(跑步机)
+            </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'outside'">
+            <div class="divShow" style="margin-left:70%"></div>
+            <ion-item>
+              出发去跑步（户外）
+            </ion-item>
+        </ion-list>
+    </div>
+
+   <div class="slideForMore" (on-drag-up)="slideUp($event)">
+        <p>滑动查看更多</p>
+        <ion-icon style="margin-top:3px;" name="arrow-down"></ion-icon>
+    </div>
+
+  <ion-list class="homeLists" no-lines>
+    <ion-list-header>
+        <h3>今日推荐运动</h3>
+    </ion-list-header> 
+    <ion-item class="recommendSports" *ngFor="let sitem of sportsItems">
+      <img src="{{sitem.sportSrc}}"/>
+      <div class="sportName">{{sitem.sportName}}</div>
+      <div class="sportTime">{{sitem.sportTime}}分钟 - {{sitem.sportRank}}</div>
+    </ion-item>
+   </ion-list>
+   <div class="blank"></div>
+
+    
+</ion-content>

@@ -1,0 +1,160 @@
+<ion-header>
+
+<ion-navbar  class="homeNav">
+  <ion-grid class="dynamicHeaderMine">
+    <ion-row>
+     <ion-col col-9>
+        <h3>我</h3>
+     </ion-col>
+     <ion-col col-1>
+       <h3> <ion-icon name="mail"></ion-icon></h3>
+      </ion-col>
+     <ion-col col-2>
+       <h3> <ion-icon name="settings" ></ion-icon></h3>
+     </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content calss="mineRecord">
+<ion-list class="detailIntroduce" (click)="openMydata()" no-lines>
+  <ion-grid>
+    <ion-row>
+     <ion-col col-3>
+      <h2 class="detailIntroduce"> 
+         <img class="thumb" src="assets/img/aCat.jpg">
+       </h2>
+     </ion-col>
+     <ion-col col-7>
+      <h2>光阳bin
+          <ion-icon name="create"></ion-icon>
+      </h2>
+      <button color="light" (click)="itemSelected(item)" clear>
+        0 粉丝
+      </button>
+        <button color="light" (click)="itemSelected(item)" clear>
+        1 关注
+      </button>
+        <button color="light" (click)="itemSelected(item)" clear>
+        1 动态
+      </button>
+     </ion-col>
+       <ion-col col-2>
+          <h2>
+          <button ion-button color="light" (click)="itemSelected(item)" clear>
+              <ion-icon name='arrow-forward'></ion-icon>
+          </button>
+          </h2>
+       </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-list>
+
+<ion-list class="detailExercise mineLists">
+  <ion-list-header class="mHeader">
+    总运动xxx分钟
+  </ion-list-header>
+  <ion-item>
+    <ion-grid>
+      <ion-row class="rankRecord">
+        <ion-col col-3 style="color:#00FF00">T1</ion-col>
+        <ion-col col-3>W1</ion-col>
+        <ion-col col-3>R0</ion-col>
+        <ion-col col-3>C0</ion-col>
+      </ion-row>
+      <ion-row class="gridForMinie">
+        <ion-col col-3 >总等级</ion-col>
+        <ion-col col-3>健身</ion-col>
+        <ion-col col-3>跑步</ion-col>
+        <ion-col col-3>骑行</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-list>
+<div class="blank"></div>
+
+<ion-list class="healthData mineLists">
+   <ion-list-header class="mHeader">
+    我的健康数据
+  </ion-list-header>
+
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3> 
+           <ion-avatar item-start>
+             <img src="assets/img/aCat.jpg">
+           </ion-avatar>
+        </ion-col>
+        <ion-col col-3> 
+           <ion-avatar item-start>
+             <img src="assets/img/aCat.jpg">
+           </ion-avatar>
+        </ion-col>
+        <ion-col col-3> 
+           <ion-avatar item-start>
+             <img src="assets/img/aCat.jpg">
+           </ion-avatar>
+        </ion-col>
+        <ion-col col-3> 
+           <ion-avatar item-start>
+             <img src="assets/img/aCat.jpg">
+           </ion-avatar>
+        </ion-col>
+      </ion-row>
+      <ion-row class="gridForMinie">
+        <ion-col col-3>运动历史</ion-col>
+        <ion-col col-3>步数记录</ion-col>
+        <ion-col col-3>身体数据</ion-col>
+        <ion-col col-3>运动能力</ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+  <button ion-item  (click)="itemSelected(item)">
+      徽章
+  </button> 
+</ion-list>
+<div class="blank"></div>
+
+<ion-list class="exerciseData mineLists">
+  <button ion-item  (click)="itemSelected(item)">
+     运动概况
+  </button> 
+  <button ion-item  (click)="itemSelected(item)">
+     每周目标
+  </button> 
+</ion-list>
+<div class="blank"></div>
+
+<ion-list class="mineLists">
+  <button ion-item  (click)="itemSelected(item)">
+     我的活动
+  </button> 
+  <button ion-item  (click)="itemSelected(item)">
+     我的收藏
+  </button> 
+   <button ion-item  (click)="itemSelected(item)">
+     我的小组
+  </button> 
+</ion-list>
+<div class="blank"></div>
+
+<ion-list calss="shoppingRecord mineLists">
+  <button ion-item  (click)="itemSelected(item)">
+    购物车
+  </button> 
+  <button ion-item  (click)="itemSelected(item)">
+    购买记录
+  </button> 
+   <button ion-item  (click)="itemSelected(item)">
+   优惠券
+  </button> 
+</ion-list>
+
+
+
+</ion-content>

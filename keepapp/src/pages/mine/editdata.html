@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar class="myDataNav">
+   <ion-title> 个人资料</ion-title>
+   <button ion-button  style="margin-left:82%" clear>保存</button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+<ion-list class="homeLists">
+     <ion-item (click)="useASComponent()">
+         <div class="editImg"> 更新头像</div>
+         <div class="myImg">
+             <img src="{{mydata.uimg}}" />
+         </div>
+     </ion-item>
+     <ion-item>
+          <ion-label>昵称</ion-label>
+          <ion-input class="cuteName" type="text" [(ngModel)]="mydata.cuteName" placeholder="{{mydata.cuteName}}"></ion-input>
+     </ion-item>
+     <ion-item>
+         <ion-label>性别</ion-label>
+         <ion-select [(ngModel)]="gender">
+            <ion-option value="male">男</ion-option>
+            <ion-option value="female">女</ion-option>
+         </ion-select>
+     </ion-item>
+</ion-list>
+<div class="blank"></div>
+
+<ion-list class="homeLists">
+     <ion-item>
+        <ion-label>出生年月</ion-label>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="mydata.birthday"></ion-datetime>
+
+     </ion-item>
+     <ion-item>所在城市</ion-item>
+</ion-list>
+<div class="blank"></div>
+
+
+<ion-list class="homeLists">
+     <ion-item>简介</ion-item>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="mydata.description" placeholder="{{mydata.description}}"></ion-input>
+     </ion-item>
+</ion-list>
+
+
+</ion-content>

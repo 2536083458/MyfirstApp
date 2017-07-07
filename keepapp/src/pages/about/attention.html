@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar  class="homeNav">
+      <ion-grid class="dynamicHeader">
+      <ion-row>
+        <ion-col col-1>
+          <h3><ion-icon name="person-add"></ion-icon></h3>
+        </ion-col>
+        <ion-col col-3 (click)="hotAbout()">
+        <h3>热门</h3>
+        </ion-col>
+        <ion-col col-3 style="border-bottom:2px solid grey">
+          <h3>关注</h3>
+        </ion-col>
+        <ion-col col-3>
+        <h3>同城</h3>
+        </ion-col>
+        <ion-col col-2>
+        <h3><ion-icon name="camera"></ion-icon></h3>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+     <ion-list *ngFor="let aitem of attentionContents" no-lines class="homeLists">
+         <ion-item > 
+             <div style="width:15%;float:left;">
+                 <img src="{{aitem.srcImg}}" style="width:36px;height:36px;border-radius:50%;"> 
+             </div>
+            <div style="float:left;width:70%;"> <p style="padding-top:13px;">{{aitem.name}}</p></div>
+            <div style="float:left;width:10%;"> <p style="padding-top:13px;">{{aitem.time}}</p></div>
+         </ion-item>
+         <ion-item class="attentionContent">{{aitem.contentTitle}}</ion-item>
+         <ion-item>
+             <ion-icon name="volume-up"></ion-icon>
+             <ion-icon name="chat"></ion-icon>
+             <ion-icon name="share-alt"></ion-icon>
+         </ion-item>
+         <ion-item class="attentionContent">
+             <p>{{aitem.discussContent1}} </p>
+              <p>{{aitem.discussContent2}} </p>
+         </ion-item>   
+     <div class="blank"></div>
+     </ion-list>
+
+</ion-content>

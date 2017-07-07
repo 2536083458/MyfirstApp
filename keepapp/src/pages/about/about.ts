@@ -39,5 +39,40 @@ export class AboutPage {
     thumbs:289,
     itemIndex:3,
   }];
+  attention(){
+    this.navCtrl.push(AttentionPage);
+  }
 
+}
+
+@Component({
+  templateUrl: 'attention.html'
+})
+export class AttentionPage {
+
+  constructor(public navCtrl: NavController) {
+
+  }
+  hotAbout(){
+    this.navCtrl.push(AboutPage);
+  }
+  attentionContents=[{
+    srcImg:"assets/img/aCat.jpg",
+    name:'keep',
+    time:'15:30',
+    contentTitle:'为了参加模仿秀，也是够拼的了，所以，你学会[展背]了吗？',
+    thumbs:500,
+    discussNum:90,
+    discussContent1:'what is this main to show',
+    discussContent2:'We can chat in english so we can practice our english level'
+  },{
+    srcImg:"assets/img/aCat.jpg",
+    name:'keep',
+    contentTitle:'In order to practice our gesture we should keep practice every day.',
+    thumbs:23,
+    discussNum:10,
+    time:'18:30',
+    discussContent1:'what is this main to show',
+    discussContent2:'We can chat in english so we can practice our english level'
+  }];
 }

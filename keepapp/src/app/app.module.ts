@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
+import { AboutPage,AttentionPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage,RunningPage,CyclePage } from '../pages/home/home';
 import { MinePage } from '../pages/mine/mine';
@@ -22,7 +22,7 @@ import { IonicStorageModule } from '@ionic/storage';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
+    AboutPage,AttentionPage,
     ContactPage,
     HomePage,
     MinePage,
@@ -39,7 +39,7 @@ import { IonicStorageModule } from '@ionic/storage';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
+    AboutPage,AttentionPage,
     ContactPage,
     HomePage,
     MinePage,
